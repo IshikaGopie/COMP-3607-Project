@@ -26,7 +26,6 @@ public class batchPDFmanipulator implements batchPDFmanipulatorINTERFACE{
     @Override
     public void PDF_name_parse(File pdf, List<student> student_info) {
         for (student o: student_info){
-             missing missing = new missing(pdf,o); //
             if(pdf.getName().contains(o.getstudent_ID())){
                 move_PDFs(pdf, o); return;
             }else if((pdf.getName().contains(o.getName().toUpperCase())) || (pdf.getName().contains(o.getName().toLowerCase())) || (pdf.getName().contains(o.getName()))){
@@ -34,6 +33,7 @@ public class batchPDFmanipulator implements batchPDFmanipulatorINTERFACE{
             }else if(pdf.getName().contains(o.getName().replaceAll("\\s","")) || pdf.getName().contains(o.getName().replaceAll(" ","_"))){
                 move_PDFs(pdf, o); return;
             }
+            //missing missing = new missing(pdf,o);
         }  
     }
 

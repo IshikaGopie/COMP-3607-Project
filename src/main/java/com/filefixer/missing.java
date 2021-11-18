@@ -32,10 +32,10 @@ public class missing implements missingInterface{
            // FileWriter fileWriter = new FileWriter(filesToRename,filename.txt); 
             fileWriter.close();
                       
-          } catch (IOException e) {
+        } catch (IOException e) {
             System.out.println("An error occurred writing to file.");
             e.printStackTrace();
-          } 
+        } 
         
     }
 
