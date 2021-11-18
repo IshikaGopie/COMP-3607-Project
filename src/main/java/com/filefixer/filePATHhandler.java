@@ -2,7 +2,7 @@ package com.filefixer;
 
 import java.io.File;
 
-public class filePATHhandler implements filePATHhandlerINTERFACE{
+public class filePATHhandler implements filePathHandlerInterface{
 
     @Override
     public String create_PATH(File pdf, student student) {

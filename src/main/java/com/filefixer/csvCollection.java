@@ -5,7 +5,7 @@ import java.util.Collection;
 
 import org.apache.commons.io.FileUtils;
 
-public class csvCollection implements fileCollectionINTERFACE{
+public class csvCollection implements fileCollectionInterface{
 
     @Override
     public Collection<File> get_Files(String path) {

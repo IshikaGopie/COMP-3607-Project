@@ -5,7 +5,7 @@ import java.util.Collection;
 
 import org.apache.commons.io.FileUtils;
 
-public class pdfCollection implements fileCollectionINTERFACE{
+public class pdfCollection implements fileCollectionInterface{
 
     @Override
     public Collection<File> get_Files(String path) {

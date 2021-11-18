@@ -6,9 +6,9 @@ import java.util.List;
 
 import org.apache.commons.io.FileUtils;
 
-public class batchPDFmanipulator implements batchPDFmanipulatorINTERFACE{
+public class pdfManipulator implements pdfManipulatorInterface{
 
-    filePATHhandlerINTERFACE PATH = new filePATHhandler();
+    filePathHandlerInterface PATH = new filePATHhandler();
 
     @Override
     public void PDF_name_parse(File pdf, List<student> student_info) {

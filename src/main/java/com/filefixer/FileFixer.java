@@ -7,7 +7,7 @@ import java.util.List;
 
 public class FileFixer {
     public static void main(String[] args) {
-        directoryHandlerINTERFACE directoryHandler = new directoryHandler();
+        directoryHandlerInterface directoryHandler = new directoryHandler();
 
         Collection<File> pdfFiles;
         fileGetterInterface fileGetter = new fileGetter(new pdfCollection());
@@ -20,7 +20,7 @@ public class FileFixer {
         csvBatchManipulatorInterface csvBatchManipulator = new csvBatchManipulator();
         String csvPath = csvBatchManipulator.getLastModified(csvFiles);
         
-        CSVmanipulatorINTERFACE csvHandler = new CSVmanipulator();
+        csvHandlerInterface csvHandler = new csvHandler();
         List<student> student_info = new ArrayList<student>();
 
         directoryHandler.newDirectory("filesToRename/renamedFiles");
@@ -31,7 +31,7 @@ public class FileFixer {
 
         missingStudentsInterface missingStudents = new missingStudents();
 
-        batchPDFmanipulatorINTERFACE pdfHandler = new batchPDFmanipulator();
+        pdfManipulatorInterface pdfHandler = new pdfManipulator();
         for(File pdf: pdfFiles){
             pdfHandler.PDF_name_parse(pdf, student_info);
         }

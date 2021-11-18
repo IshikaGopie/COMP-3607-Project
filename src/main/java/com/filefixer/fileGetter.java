@@ -4,10 +4,9 @@ import java.io.File;
 import java.util.Collection;
 
 public class fileGetter implements fileGetterInterface{
-    fileCollectionINTERFACE fileCollectionStrategy;
-    filePATHhandlerINTERFACE PATH = new filePATHhandler();
+    fileCollectionInterface fileCollectionStrategy;
 
-    public fileGetter(fileCollectionINTERFACE fileCollectionStrategy){
+    public fileGetter(fileCollectionInterface fileCollectionStrategy){
         this.fileCollectionStrategy = fileCollectionStrategy;
     } 
 
@@ -17,7 +16,7 @@ public class fileGetter implements fileGetterInterface{
         return files;
     }
 
-    public void changeFileCollectionStrategy(fileCollectionINTERFACE fileCollectionStrategy){
+    public void changeFileCollectionStrategy(fileCollectionInterface fileCollectionStrategy){
         this.fileCollectionStrategy = fileCollectionStrategy;
     }
 }

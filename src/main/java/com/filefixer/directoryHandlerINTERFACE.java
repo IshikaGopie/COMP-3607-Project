@@ -1,5 +1,5 @@
 package com.filefixer;
 
-public interface directoryHandlerINTERFACE{
+public interface directoryHandlerInterface{
     public void newDirectory(String path);
 }
