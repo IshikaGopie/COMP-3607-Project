@@ -8,7 +8,7 @@ import org.apache.commons.io.FileUtils;
 
 public class pdfManipulator implements pdfManipulatorInterface{
 
-    filePathHandlerInterface PATH = new filePATHhandler();
+    filePathHandlerInterface PATH = new filePathHandler();
 
     @Override
     public void PDF_name_parse(File pdf, List<student> student_info) {
