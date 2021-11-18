@@ -9,21 +9,34 @@ public class FileFixer {
     public static void main(String[] args) {
         directoryHandlerINTERFACE directoryHandler = new directoryHandler();
 
-        CSVmanipulatorINTERFACE csvHandler = new CSVmanipulator(new csvCollection());
-        batchPDFmanipulatorINTERFACE pdfHandler = new batchPDFmanipulator(new pdfCollection());
-        
-        List<student> student_info = new ArrayList<student>();
         Collection<File> pdfFiles;
+        fileGetterInterface fileGetter = new fileGetter(new pdfCollection());
+        pdfFiles = fileGetter.getFiles("filesToRename");
+
+        Collection<File> csvFiles;
+        fileGetter.changeFileCollectionStrategy(new csvCollection());
+        csvFiles = fileGetter.getFiles("filesToRename");
+
+        csvBatchManipulatorInterface csvBatchManipulator = new csvBatchManipulator();
+        String csvPath = csvBatchManipulator.getLastModified(csvFiles);
+        
+        CSVmanipulatorINTERFACE csvHandler = new CSVmanipulator();
+        List<student> student_info = new ArrayList<student>();
 
         directoryHandler.newDirectory("filesToRename/renamedFiles");
 
-        pdfFiles = pdfHandler.get_PDFs("filesToRename");
-        csvHandler.get_CSV_file("filesToRename");
+        csvHandler.loadStudentInfo(csvPath);
 
         student_info = csvHandler.getStudentInfo();
 
+        missingStudentsInterface missingStudents = new missingStudents();
+
+        batchPDFmanipulatorINTERFACE pdfHandler = new batchPDFmanipulator();
         for(File pdf: pdfFiles){
             pdfHandler.PDF_name_parse(pdf, student_info);
         }
+
+        missingStudents.addMissingStudents(student_info);
+        missingStudents.store();
     }
 }

@@ -1,11 +1,10 @@
 package com.filefixer;
 
 import java.io.File;
-import java.util.Collection;
 import java.util.List;
 
 public interface batchPDFmanipulatorINTERFACE{
-    public Collection<File> get_PDFs(String path);
+    //public Collection<File> get_PDFs(String path);
     public void PDF_name_parse(File pdf, List<student> student_info);
     public void move_PDFs(File pdf, student student);
 

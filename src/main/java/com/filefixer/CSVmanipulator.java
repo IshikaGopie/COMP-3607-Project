@@ -2,7 +2,6 @@ package com.filefixer;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 import java.util.Scanner;
 
@@ -10,26 +9,6 @@ public class CSVmanipulator implements CSVmanipulatorINTERFACE{
     private List<student> student_info = new ArrayList<student>();
 
     fileCollectionINTERFACE fileCollectionStrategy;
-
-    public CSVmanipulator(fileCollectionINTERFACE fileCollectionStrategy){
-        this.fileCollectionStrategy = fileCollectionStrategy;
-    }   
-
-    public void get_CSV_file(String path){
-        Collection<File> csvCollection = fileCollectionStrategy.get_Files(path);
-        File chosen_file = csvCollection.iterator().next();
-
-        if(csvCollection.size() > 1){
-            for(File file: csvCollection){
-                if(chosen_file.lastModified() < file.lastModified()){
-                    chosen_file = file;
-                }
-            }
-        }else if(csvCollection.size() < 1){
-            //need to implement error message.
-        }
-        loadStudentInfo(chosen_file.getPath());
-    }
 
     public void loadStudentInfo(String path){
         try {
