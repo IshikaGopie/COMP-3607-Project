@@ -8,7 +8,12 @@ import java.util.List;
 public class FileFixer {
     public static void main(String[] args) {
         directoryHandlerInterface directoryHandler = new directoryHandler();
-
+        File zipFile = new  File("sample1.zip");
+        ZipFolder zipFoleder = new ZipFolder();
+        zipFoleder.extractZip(zipFile);
+        directoryHandler.newDirectory("filesToRename");
+        directoryHandler.copyDirectory("sample1", "filesToRename");
+        
         Collection<File> pdfFiles;
         fileGetterInterface fileGetter = new fileGetter(new pdfCollection());
         pdfFiles = fileGetter.getFiles("filesToRename");
