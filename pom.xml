@@ -78,6 +78,11 @@
             <artifactId>checkstyle-rules</artifactId>
             <version>${checkstyle-rules.version}</version>
           </dependency>
+          <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.11.0</version>
+          </dependency>
         </dependencies>
         <configuration>
           <configLocation>com/github/ngeor/checkstyle.xml</configLocation>
