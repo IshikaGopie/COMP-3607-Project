@@ -7,7 +7,7 @@ import org.apache.commons.io.FileUtils;
 
 public class pdfMover implements pdfMoverInterface{
 
-    filePathHandlerInterface Path = new filePathHandler();
+    pdfPathHandlerInterface Path = new pdfPathHandler();
 
     @Override
     public void movePdfs(File pdf, student student) {

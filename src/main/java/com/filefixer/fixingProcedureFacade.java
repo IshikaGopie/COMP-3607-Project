@@ -6,7 +6,8 @@ import java.util.List;
 
 public class fixingProcedureFacade implements fixingProcedureFacadeInterface{
     directoryHandlerInterface directoryHandler;
-    fileCollectionHandlerInterface fileCollectionHandler;
+    zipCollectionHandlerInterface zipCollectionHandler;
+    csvCollectionHandlerInterface csvCollectionHandler;
     csvHandlerInterface csvHandler;
     pdfHandlerInterface pdfHandler;
 
@@ -15,14 +16,15 @@ public class fixingProcedureFacade implements fixingProcedureFacadeInterface{
 
     fixingProcedureFacade(){
         directoryHandler = new directoryHandler();
-        fileCollectionHandler = new fileCollectionHandler();
+        zipCollectionHandler = new zipCollectionHandler();
+        csvCollectionHandler = new csvCollectionHandler();
         csvHandler = new csvHandler();
         pdfHandler = new pdfHandler();
         missingStudents = new missingStudents();
     }
 
     public void extractFiles(Collection<File> zipFiles){
-        String zipPath = fileCollectionHandler.disallowCollection(zipFiles);
+        String zipPath = zipCollectionHandler.disallow(zipFiles);
         if(zipPath != null){
             File zipFile = new File(zipPath);
             ZipFolder zipFolder = new ZipFolder();
@@ -32,7 +34,7 @@ public class fixingProcedureFacade implements fixingProcedureFacadeInterface{
     
     public void renameAndMovePdfs(Collection<File> pdfFiles, Collection<File> csvFiles){
         directoryHandler.newDirectory("filesToRename/renamedFiles");
-        String csvPath = fileCollectionHandler.getLastModified(csvFiles);
+        String csvPath = csvCollectionHandler.getLastModified(csvFiles);
         System.out.println(csvPath);
         loadStudents(csvPath);
         for(File pdf: pdfFiles){
