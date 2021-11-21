@@ -14,6 +14,8 @@ public class fixingProcedureFacade implements fixingProcedureFacadeInterface{
     List<student> student_info;
     missingStudentsInterface missingStudents;
 
+    
+
     fixingProcedureFacade(){
         directoryHandler = new directoryHandler();
         zipCollectionHandler = new zipCollectionHandler();
@@ -26,8 +28,8 @@ public class fixingProcedureFacade implements fixingProcedureFacadeInterface{
     public void extractFiles(Collection<File> zipFiles){
         String zipPath = zipCollectionHandler.disallow(zipFiles);
         if(zipPath != null){
-            File zipFile = new File(zipPath);
-            ZipFoldere zipFolder = new ZipFoldere();
+            File zipFile=new File(zipPath);
+            zipFolderInterface zipFolder=new zipFolder();
             zipFolder.extractZip(zipFile);
         }
     }
