@@ -8,22 +8,28 @@ import java.util.List;
 public class FileFixer {
     public static void main(String[] args) {
         directoryHandlerInterface directoryHandler = new directoryHandler();
-        File zipFile = new  File("sample1.zip");
-        ZipFolder zipFoleder = new ZipFolder();
-        zipFoleder.extractZip(zipFile);
-        directoryHandler.newDirectory("filesToRename");
-        directoryHandler.copyDirectory("sample1", "filesToRename");
+        
+        Collection<File> zipFiles;
+        fileGetterInterface fileGetter = new fileGetter(new zipCollection());
+        zipFiles = fileGetter.getFiles("filesToRename");
+
+        fileCollectionHandlerInterface fileCollectionHandler = new fileCollectionHandler();
+        String zipPath = fileCollectionHandler.disallowCollection(zipFiles);
+        if(zipPath != null){
+            File zipFile = new File(zipPath);
+            ZipFolder zipFolder = new ZipFolder();
+            zipFolder.extractZip(zipFile);
+        }
         
         Collection<File> pdfFiles;
-        fileGetterInterface fileGetter = new fileGetter(new pdfCollection());
+        fileGetter.changeFileCollectionStrategy(new pdfCollection());
         pdfFiles = fileGetter.getFiles("filesToRename");
 
         Collection<File> csvFiles;
         fileGetter.changeFileCollectionStrategy(new csvCollection());
         csvFiles = fileGetter.getFiles("filesToRename");
 
-        csvBatchManipulatorInterface csvBatchManipulator = new csvBatchManipulator();
-        String csvPath = csvBatchManipulator.getLastModified(csvFiles);
+        String csvPath = fileCollectionHandler.getLastModified(csvFiles);
         
         csvHandlerInterface csvHandler = new csvHandler();
         List<student> student_info = new ArrayList<student>();
@@ -36,9 +42,9 @@ public class FileFixer {
 
         missingStudentsInterface missingStudents = new missingStudents();
 
-        pdfManipulatorInterface pdfHandler = new pdfManipulator();
+        pdfHandlerInterface pdfHandler = new pdfHandler();
         for(File pdf: pdfFiles){
-            pdfHandler.PDF_name_parse(pdf, student_info);
+            pdfHandler.manipulatePdf(pdf, student_info);
         }
 
         missingStudents.addMissingStudents(student_info);

@@ -14,6 +14,11 @@ public class student implements studentInterface{
     }
 
     @Override
+    public void changeStatus(){
+        student_missing = false;
+    }
+
+    @Override
     public String getparticipant_ID() {
         return participant_ID;
     }
@@ -26,11 +31,6 @@ public class student implements studentInterface{
     @Override
     public String getstudent_ID() {
         return student_ID;
-    }
-
-    @Override
-    public void changeStatus(){
-        student_missing = false;
     }
 
     @Override

@@ -1,11 +1,7 @@
 package com.filefixer;
 
-import java.io.File;
-import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-
-import org.apache.commons.io.FileUtils;
 
 public class directoryHandler implements directoryHandlerInterface{
 
@@ -17,7 +13,7 @@ public class directoryHandler implements directoryHandlerInterface{
         }
     }
     
-    public void copyDirectory(String sourceDirectory, String destinationDirectory){
+    /*public void copyDirectory(String sourceDirectory, String destinationDirectory){
         File sourceFile = new File(sourceDirectory); 
         File destFile = new File(destinationDirectory);
         try {
@@ -25,5 +21,5 @@ public class directoryHandler implements directoryHandlerInterface{
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
+    }*/
 }
