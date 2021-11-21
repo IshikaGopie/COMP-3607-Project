@@ -25,6 +25,12 @@ public class fixingProcedureFacade implements fixingProcedureFacadeInterface{
         missingStudents = new missingStudents();
     }
 
+
+    private void loadStudents(String csvPath){
+        csvHandler.loadStudentInfo(csvPath);
+        student_info = csvHandler.getStudentInfo();
+    }
+
     public void extractFiles(Collection<File> zipFiles){
         String zipPath = zipCollectionHandler.disallow(zipFiles);
         if(zipPath != null){
@@ -42,11 +48,6 @@ public class fixingProcedureFacade implements fixingProcedureFacadeInterface{
         for(File pdf: pdfFiles){
             pdfHandler.manipulatePdf(pdf, student_info);
         }
-    }
-
-    private void loadStudents(String csvPath){
-        csvHandler.loadStudentInfo(csvPath);
-        student_info = csvHandler.getStudentInfo();
     }
 
     public void storeMissingStudents(){
