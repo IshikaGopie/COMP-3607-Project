@@ -27,7 +27,7 @@ public class fixingProcedureFacade implements fixingProcedureFacadeInterface{
         String zipPath = zipCollectionHandler.disallow(zipFiles);
         if(zipPath != null){
             File zipFile = new File(zipPath);
-            ZipFolder zipFolder = new ZipFolder();
+            ZipFoldere zipFolder = new ZipFoldere();
             zipFolder.extractZip(zipFile);
         }
     }
