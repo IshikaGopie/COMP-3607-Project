@@ -10,7 +10,7 @@ import java.util.List;
  * This class utilizes the Facade Design Pattern which hides the complexity of other classes into three
  * methods that can be used by the client. 
  */
-public class fixingProcedureFacade implements fixingProcedureFacadeInterface{
+public class FixingProcedureFacade implements FixingProcedureFacadeInterface{
 
     private directoryHandlerInterface directoryHandler;
     private zipCollectionHandlerInterface zipCollectionHandler;
