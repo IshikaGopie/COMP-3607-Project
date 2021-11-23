@@ -4,7 +4,7 @@ import java.util.List;
 /**
  * Interface for the {@link csvHandler}.
  */
-public interface csvHandlerInterface{
+public interface CsvHandlerInterface{
     /**
      * See {@link csvHandler#loadStudentInfo(String)}.
      * @param path The file-path of the CSV file.
