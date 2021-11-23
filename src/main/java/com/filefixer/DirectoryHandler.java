@@ -6,7 +6,7 @@ import java.nio.file.Paths;
 /**
  * This class handles the creation of one or more directories.
  */
-public class directoryHandler implements directoryHandlerInterface{
+public class DirectoryHandler implements DirectoryHandlerInterface{
     /**
      * Creates one or multiple directories based on folder-path given.
      * @param path A folder-path.
