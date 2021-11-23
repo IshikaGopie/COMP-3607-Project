@@ -17,11 +17,11 @@ public class pdfMover implements pdfMoverInterface{
      * @param student The current student instance.
      */
     @Override
-    public void movePdfs(File pdf, student student) {
+    public void movePdfs(File pdf, student student, String directory) {
         try {
             FileUtils.moveFile(
             FileUtils.getFile(pdf.getPath()), 
-            FileUtils.getFile(Path.createPath(pdf, student)));
+            FileUtils.getFile(Path.createPath(pdf, student, directory)));
         } catch (IOException e) {
             e.printStackTrace();
         }
