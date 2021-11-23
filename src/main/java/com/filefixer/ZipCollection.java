@@ -7,7 +7,7 @@ import org.apache.commons.io.FileUtils;
 /**
  * A 'fileCollectionStrategy' used for the collection of ZIP files.
  */
-public class ZipCollection implements fileCollectionInterface{
+public class ZipCollection implements FileCollectionInterface{
     /** 
      * Returns all ZIP folders present within a directory.
      * @param path The folder-path of the directory.
