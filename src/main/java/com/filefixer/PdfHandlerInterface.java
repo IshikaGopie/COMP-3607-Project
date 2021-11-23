@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * Interface for the {@link pdfHandler} class.
  */
-public interface pdfHandlerInterface {
+public interface PdfHandlerInterface {
     /**
      * See {@link pdfHandler#manipulatePdf(File, List)}.
 	 * @param pdf The current PDF file.
