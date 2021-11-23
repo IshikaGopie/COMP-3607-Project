@@ -4,7 +4,7 @@ import java.io.File;
 /**
  * Interface for the {@link pdfMover} class.
  */
-public interface pdfMoverInterface{
+public interface PdfMoverInterface{
     /**
      * See {@link pdfMover#movePdfs(File, student)}.
 	 * @param pdf The current PDF file.
