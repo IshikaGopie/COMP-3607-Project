@@ -5,7 +5,7 @@ import java.io.File;
 /**
  * This class handles the destination file-path of PDF files.
  */
-public class pdfPathHandler implements pdfPathHandlerInterface{
+public class PdfPathHandler implements PdfPathHandlerInterface{
     /** 
      * Creates the destination file-path for the PDF as well as renames the PDF in question based on student information.
      * @param pdf The current PDF file.
