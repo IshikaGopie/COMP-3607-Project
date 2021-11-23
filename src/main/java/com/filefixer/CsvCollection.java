@@ -6,7 +6,7 @@ import org.apache.commons.io.FileUtils;
 /**
  * A 'fileCollectionStrategy' used for a collection of CSV files.
  */
-public class csvCollection implements fileCollectionInterface{
+public class CsvCollection implements fileCollectionInterface{
 
 
     /**
