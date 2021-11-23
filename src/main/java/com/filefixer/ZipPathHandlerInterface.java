@@ -4,7 +4,7 @@ import java.util.zip.ZipEntry;
 /**
  * Interface for the {@link zipPathHandler} class.
  */
-public interface zipPathHandlerInterface {
+public interface ZipPathHandlerInterface {
     /**
      * See {@link zipPathHandler#modifyUnzipPath(ZipEntry)}.
 	 * @param zipEntry The current ZIP file being extracted.
