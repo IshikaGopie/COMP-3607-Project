@@ -6,7 +6,7 @@ import java.util.Collection;
  * This class handles the creation of a file-collection based on the type of file specified. 
  * This class operates as the context class for the Strategy Design Pattern implemented.
  */
-public class fileGetter implements fileGetterInterface{
+public class FileGetter implements FileGetterInterface{
     /**
      * The file-collection to be created. See {@link csvCollection}, {@link pdfCollection} and {@link zipCollection}.
      */
