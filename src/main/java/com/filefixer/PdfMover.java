@@ -7,7 +7,7 @@ import org.apache.commons.io.FileUtils;
 /**
  * This class handles the relocation of a PDF file to a new directory.
  */
-public class pdfMover implements pdfMoverInterface{
+public class PdfMover implements PdfMoverInterface{
 
 	private pdfPathHandlerInterface Path = new pdfPathHandler();
 
