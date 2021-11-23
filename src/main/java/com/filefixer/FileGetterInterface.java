@@ -5,7 +5,7 @@ import java.util.Collection;
 /**
  * Interface for the {@link fileGetter}.
  */
-public interface fileGetterInterface {
+public interface FileGetterInterface {
     /**
      * See {@link fileGetter#getFiles(String)}.
 	 * @param path The folder-path of the files being requested.
