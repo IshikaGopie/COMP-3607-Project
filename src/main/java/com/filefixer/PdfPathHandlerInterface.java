@@ -4,7 +4,7 @@ import java.io.File;
 /**
  * Interface for the {@link pdfPathHandler} class.
  */
-public interface pdfPathHandlerInterface{
+public interface PdfPathHandlerInterface{
     /**
      * See {@link pdfPathHandler#createPath(File, student)}.
 	 * @param pdf The current PDF file.
