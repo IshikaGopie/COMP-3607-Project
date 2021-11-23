@@ -11,5 +11,5 @@ public interface pdfHandlerInterface {
 	 * @param pdf The current PDF file.
 	 * @param student_info The List containing student information.
 	 */
-    public void manipulatePdf(File pdf, List<student> student_info);
+    public void manipulatePdf(File pdf, List<student> student_info, String directory);
 }
