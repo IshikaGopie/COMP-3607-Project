@@ -5,7 +5,7 @@ import java.util.Collection;
 /**
  * Interface for the {@link zipCollectionHandler} class.
  */
-public interface zipCollectionHandlerInterface {
+public interface ZipCollectionHandlerInterface {
     /**
      * See {@link zipCollectionHandler#zipCheck(Collection)}.
 	 * @param files The collection of ZIP files to be parsed.
