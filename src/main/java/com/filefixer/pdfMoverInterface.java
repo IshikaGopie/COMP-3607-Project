@@ -10,5 +10,5 @@ public interface pdfMoverInterface{
 	 * @param pdf The current PDF file.
 	 * @param student The current student instance.
 	 */
-    public void movePdfs(File pdf, student student);
+    public void movePdfs(File pdf, student student, String directory);
 }   
