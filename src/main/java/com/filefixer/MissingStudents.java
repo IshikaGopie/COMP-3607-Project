@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.io.IOException;
 
-public class missingStudents implements missingStudentsInterface{
+public class MissingStudents implements MissingStudentsInterface{
     /**
      * An ArrayList of all students with missing submissions.
      */
