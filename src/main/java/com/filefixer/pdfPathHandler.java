@@ -13,8 +13,8 @@ public class pdfPathHandler implements pdfPathHandlerInterface{
      * @return String: The destination file-path of the current PDF.
      */
     @Override
-    public String createPath(File pdf, student student) {
-        String destinationString = "filesToRename/renamedFiles/" + student.getName() + "_" + 
+    public String createPath(File pdf, student student, String directory) {
+        String destinationString = directory + "/"  + student.getName() + "_" + 
         student.getParticipantID().replace("Participant ", "") +
         "_assignsubmission_file_" + pdf.getName();
         
