@@ -21,19 +21,19 @@ public class pdfHandler implements pdfHandlerInterface {
      * @param student_info The List containing student information.
      */
     @Override
-    public void manipulatePdf(File pdf, List<student> student_info) {
+    public void manipulatePdf(File pdf, List<student> student_info, String directory) {
         for (student o: student_info){
             if(pdf.getName().contains(o.getStudentID())){
                 o.changeStatus(); 
-                PdfMover.movePdfs(pdf, o); 
+                PdfMover.movePdfs(pdf, o, directory); 
                 return;
             }else if((pdf.getName().contains(o.getName().toUpperCase())) || (pdf.getName().contains(o.getName().toLowerCase())) || (pdf.getName().contains(o.getName()))){
                 o.changeStatus(); 
-                PdfMover.movePdfs(pdf, o); 
+                PdfMover.movePdfs(pdf, o, directory); 
                 return;
             }else if(pdf.getName().contains(o.getName().replaceAll("\\s","")) || pdf.getName().contains(o.getName().replaceAll(" ","_"))){
                 o.changeStatus(); 
-                PdfMover.movePdfs(pdf, o); 
+                PdfMover.movePdfs(pdf, o, directory); 
                 return;
             }
         }
