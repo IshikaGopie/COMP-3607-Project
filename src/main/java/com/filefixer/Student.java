@@ -1,6 +1,6 @@
 package com.filefixer;
 
-public class student implements studentInterface{
+public class Student implements StudentInterface{
 	
     private String participantID;
     
