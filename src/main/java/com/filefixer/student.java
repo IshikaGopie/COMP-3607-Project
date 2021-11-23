@@ -60,6 +60,13 @@ public class student implements studentInterface{
     public boolean getStatus(){
         return studentMissing;
     }
-
-
+    
+    @Override
+    public boolean equals(Object O){
+        if(O instanceof student){
+            if(participantID.equals(((student)O).getParticipantID()) && name.equals(((student)O).getName()) && studentID.equals(((student)O).getStudentID()))
+                return true;
+        }
+        return false;
+    }
 }
