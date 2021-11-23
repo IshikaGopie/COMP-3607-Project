@@ -7,7 +7,7 @@ import java.util.Scanner;
 /**
  * This class processes data from a single CSV file to produce a List of students.
  */
-public class csvHandler implements csvHandlerInterface{
+public class CsvHandler implements CsvHandlerInterface{
     /**
      * A List of all students present in the CSV file as well as each of their student information.
      */
