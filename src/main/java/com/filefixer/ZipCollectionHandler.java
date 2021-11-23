@@ -6,7 +6,7 @@ import java.util.Collection;
 /**
  * This class determines whether a ZIP folder is present in a file-collection.
  */
-public class zipCollectionHandler implements zipCollectionHandlerInterface{
+public class ZipCollectionHandler implements ZipCollectionHandlerInterface{
     /** 
      * Checks the ZIP collection to determine the amount of ZIP folders present.
      * The program will terminate if the amount of ZIP folders present is greater than 1.
