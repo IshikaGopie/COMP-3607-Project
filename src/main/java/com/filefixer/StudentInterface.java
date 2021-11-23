@@ -2,7 +2,7 @@ package com.filefixer;
 /**
  * Interface for the {@link student} class.
  */
-public interface studentInterface{
+public interface StudentInterface{
     /**
      * See {@link student#changeStatus()}.
 	 */
