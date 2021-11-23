@@ -4,7 +4,7 @@ import java.util.List;
 /**
  * Interface for the {@link missingStudents} class.
  */
-public interface missingStudentsInterface {
+public interface MissingStudentsInterface {
     /**
      * See {@link missingStudents#storeMissingStudents()}.
 	 */
