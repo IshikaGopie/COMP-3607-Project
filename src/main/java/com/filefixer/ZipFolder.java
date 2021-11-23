@@ -10,7 +10,7 @@ import java.util.zip.ZipInputStream;
 /**
  * This class handles the extraction of a ZIP folder's contents.
  */
-public class zipFolder implements zipFolderInterface{
+public class ZipFolder implements ZipFolderInterface{
     /**
      * See {@link java.util.zip.ZipInputStream}.
      */
