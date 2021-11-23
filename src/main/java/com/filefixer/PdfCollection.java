@@ -7,7 +7,7 @@ import org.apache.commons.io.FileUtils;
 /**
  * A 'fileCollectionStrategy' used for the collection of PDF files.
  */
-public class pdfCollection implements fileCollectionInterface{
+public class PdfCollection implements FileCollectionInterface{
 
     
     /** 
