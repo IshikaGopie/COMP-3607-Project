@@ -6,7 +6,7 @@ import java.util.Collection;
 /**
  * This class handles operations for parsing a collection of CSV files.
  */
-public class csvCollectionHandler implements csvCollectionHandlerInterface {
+public class CsvCollectionHandler implements CsvCollectionHandlerInterface {
     /**
      * Checks the CSV collection to determine the amount of CSV files present 
      * and returns the file-path of the last modified CSV file from a given file collection.
