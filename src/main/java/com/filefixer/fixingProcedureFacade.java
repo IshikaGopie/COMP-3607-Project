@@ -78,7 +78,7 @@ public class fixingProcedureFacade implements fixingProcedureFacadeInterface{
         System.out.println(csvPath);
         loadStudents(csvPath);
         for(File pdf: pdfFiles){
-            pdfHandler.manipulatePdf(pdf, student_info);
+            pdfHandler.manipulatePdf(pdf, student_info, directory);
         }
     }
 
