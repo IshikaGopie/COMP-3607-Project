@@ -3,7 +3,7 @@ import java.io.File;
 /**
  * Interface for the {@link zipFolder} class.
  */
-public interface zipFolderInterface {
+public interface ZipFolderInterface {
     /**
      * See {@link zipFolder#extractZip(File)}.
 	 * @param zipFile The current ZIP folder to be extracted.
