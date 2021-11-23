@@ -6,7 +6,7 @@ import java.util.List;
  * This class manipulates a PDF if matched with certain criteria from a student instance.
  * This class also manipulates the student instance in question to reflect this criteria match.
  */
-public class pdfHandler implements pdfHandlerInterface {
+public class PdfHandler implements PdfHandlerInterface {
     /**
      * See {@link pdfMover}.
      */
