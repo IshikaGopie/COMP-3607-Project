@@ -38,8 +38,8 @@ public class MissingStudents implements MissingStudentsInterface{
      * @param student_info List containing student information.
      */
     @Override
-    public void addMissingStudents(List<student> student_info) {
-        for(student o: student_info){
+    public void addMissingStudents(List<Student> student_info) {
+        for(Student o: student_info){
             if(o.getStatus()){
                 missingStudents.add(o.getName());
             }

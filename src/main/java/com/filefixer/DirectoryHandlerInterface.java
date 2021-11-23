@@ -1,10 +1,10 @@
 package com.filefixer;
 /**
- * Interface for the {@link directoryHandler}.
+ * Interface for the {@link DirectoryHandler}.
  */
 public interface DirectoryHandlerInterface{
     /**
-     * See {@link directoryHandler#newDirectory(String)}.
+     * See {@link DirectoryHandler#newDirectory(String)}.
 	 * @param path The folder-path for directory creation.
 	 */
     public void newDirectory(String path);

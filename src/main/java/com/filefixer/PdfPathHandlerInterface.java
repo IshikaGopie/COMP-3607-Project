@@ -2,14 +2,12 @@ package com.filefixer;
 
 import java.io.File;
 /**
- * Interface for the {@link pdfPathHandler} class.
+ * Interface for the {@link PdfPathHandler} class.
  */
 public interface PdfPathHandlerInterface{
     /**
-     * See {@link pdfPathHandler#createPath(File, student)}.
-	 * @param pdf The current PDF file.
-	 * @param student The current student instance.
+     * See {@link PdfPathHandler#createPath(File, Student, String)}.
 	 * @return String: The destination file-path of the current PDF.
 	 */
-    public String createPath(File pdf, student student, String directory);
+    public String createPath(File pdf, Student student, String directory);
 }

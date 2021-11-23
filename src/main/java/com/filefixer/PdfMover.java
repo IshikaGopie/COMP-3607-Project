@@ -9,15 +9,13 @@ import org.apache.commons.io.FileUtils;
  */
 public class PdfMover implements PdfMoverInterface{
 
-	private pdfPathHandlerInterface Path = new pdfPathHandler();
+	private PdfPathHandlerInterface Path = new PdfPathHandler();
 
     /** 
      * Renames and moves PDF file based on student information.
-     * @param pdf The current PDF file.
-     * @param student The current student instance.
      */
     @Override
-    public void movePdfs(File pdf, student student, String directory) {
+    public void movePdfs(File pdf, Student student, String directory) {
         try {
             FileUtils.moveFile(
             FileUtils.getFile(pdf.getPath()), 

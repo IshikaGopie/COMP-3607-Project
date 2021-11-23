@@ -9,7 +9,7 @@ import java.util.Collection;
 public class getPDFsTest{
     @Test
     void getPDFs(){
-        fileGetterInterface fileGetter = new fileGetter(new pdfCollection());
+        FileGetterInterface fileGetter = new FileGetter(new PdfCollection());
         String[] name1 = new String[3];
         String[] name2 = new String[3];
         Collection<File> pdfFiles1 = new ArrayList<File>();;

@@ -3,13 +3,12 @@ package com.filefixer;
 import java.io.File;
 import java.util.List;
 /**
- * Interface for the {@link pdfHandler} class.
+ * Interface for the {@link PdfHandler} class.
  */
 public interface PdfHandlerInterface {
     /**
-     * See {@link pdfHandler#manipulatePdf(File, List)}.
-	 * @param pdf The current PDF file.
-	 * @param student_info The List containing student information.
+     * See {@link PdfHandler#manipulatePdf(File, List, String)}.
+	 *  @param directory The folder-path of the directory files are to be moved.
 	 */
-    public void manipulatePdf(File pdf, List<student> student_info, String directory);
+    public void manipulatePdf(File pdf, List<Student> student_info, String directory);
 }

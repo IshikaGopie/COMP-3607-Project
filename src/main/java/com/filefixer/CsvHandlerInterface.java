@@ -2,16 +2,16 @@ package com.filefixer;
 
 import java.util.List;
 /**
- * Interface for the {@link csvHandler}.
+ * Interface for the {@link CsvHandler}.
  */
 public interface CsvHandlerInterface{
     /**
-     * See {@link csvHandler#loadStudentInfo(String)}.
+     * See {@link CsvHandler#loadStudentInfo(String)}.
      * @param path The file-path of the CSV file.
      */
     public void loadStudentInfo(String path);
     /**
      * @return {@link List}<{@link student}>: The List of students.
      */
-    public List<student> getStudentInfo();
+    public List<Student> getStudentInfo();
 }

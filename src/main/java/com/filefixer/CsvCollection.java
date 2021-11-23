@@ -10,8 +10,7 @@ public class CsvCollection implements FileCollectionInterface{
 
 
     /**
-     * @param path The folder-path of the directory.
-     * @return {@link Collection}<{@link File}>: A collection of all CSV files.
+     * @param path The folder-path where the CSV files are located.
      */
     @Override
     public Collection<File> getFiles(String path) {

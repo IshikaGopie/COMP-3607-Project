@@ -8,14 +8,14 @@ import java.util.Collection;
  */
 public class FileGetter implements FileGetterInterface{
     /**
-     * The file-collection to be created. See {@link csvCollection}, {@link pdfCollection} and {@link zipCollection}.
+     * The file-collection to be created. See {@link CsvCollection}, {@link PdfCollection} and {@link ZipCollection}.
      */
-    private fileCollectionInterface fileCollectionStrategy;
+    private FileCollectionInterface fileCollectionStrategy;
 
     /**
      * @param fileCollectionStrategy See {@link #fileCollectionStrategy}.
      */
-    public fileGetter(fileCollectionInterface fileCollectionStrategy){
+    public FileGetter(FileCollectionInterface fileCollectionStrategy){
         this.fileCollectionStrategy = fileCollectionStrategy;
     } 
 
@@ -36,7 +36,7 @@ public class FileGetter implements FileGetterInterface{
      * Changes the 'fileCollectionStrategy' being requested.
      * @param fileCollectionStrategy See {@link #fileCollectionStrategy}.
      */
-    public void changeFileCollectionStrategy(fileCollectionInterface fileCollectionStrategy){
+    public void changeFileCollectionStrategy(FileCollectionInterface fileCollectionStrategy){
         this.fileCollectionStrategy = fileCollectionStrategy;
     }
 }

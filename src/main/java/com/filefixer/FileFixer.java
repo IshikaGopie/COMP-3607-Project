@@ -15,21 +15,21 @@ public class FileFixer {
      */
     public static void main(String[] args) {
 
-        fixingProcedureFacadeInterface fixingProcedure = new fixingProcedureFacade("filesToRename/renamedFiles");
+        FixingProcedureFacade fixingProcedure = new FixingProcedureFacade("filesToRename/renamedFiles");
 
         Collection<File> zipFiles;
-        fileGetterInterface fileGetter = new fileGetter(new zipCollection());
+        FileGetterInterface fileGetter = new FileGetter(new ZipCollection());
         zipFiles = fileGetter.getFiles("filesToRename");
 
         fixingProcedure.extractFiles(zipFiles);
 
         Collection<File> pdfFiles;
-        fileGetter.changeFileCollectionStrategy(new pdfCollection());
+        fileGetter.changeFileCollectionStrategy(new PdfCollection());
         pdfFiles = fileGetter.getFiles("filesToRename");
 
 
         Collection<File> csvFiles;
-        fileGetter.changeFileCollectionStrategy(new csvCollection());
+        fileGetter.changeFileCollectionStrategy(new CsvCollection());
         csvFiles = fileGetter.getFiles("filesToRename");
 
         fixingProcedure.renameAndMovePdfs(pdfFiles, csvFiles);

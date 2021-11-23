@@ -22,9 +22,9 @@ public class ZipFolder implements ZipFolderInterface{
 
 
     /**
-     * See {@link zipPathHandler}.
+     * See {@link ZipPathHandler}.
      */
-    private zipPathHandlerInterface zipPathHandler = new zipPathHandler();
+    private ZipPathHandlerInterface zipPathHandler = new ZipPathHandler();
 
     
     /** 

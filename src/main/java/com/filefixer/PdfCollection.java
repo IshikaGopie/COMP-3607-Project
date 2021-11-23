@@ -11,9 +11,7 @@ public class PdfCollection implements FileCollectionInterface{
 
     
     /** 
-     * Returns all PDF files present within a directory.
-     * @param path The folder-path of the directory.
-     * @return {@link Collection}<{@link File}>: A collection of all PDF files.
+     * @param path The folder-path where the PDF files are located.
      */
     @Override
     public Collection<File> getFiles(String path) {

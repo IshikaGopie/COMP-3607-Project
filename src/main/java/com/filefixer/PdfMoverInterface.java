@@ -2,13 +2,11 @@ package com.filefixer;
 
 import java.io.File;
 /**
- * Interface for the {@link pdfMover} class.
+ * Interface for the {@link PdfMover} class.
  */
 public interface PdfMoverInterface{
     /**
-     * See {@link pdfMover#movePdfs(File, student)}.
-	 * @param pdf The current PDF file.
-	 * @param student The current student instance.
+     * See {@link pdfMover#movePdfs(File, Student, String)}.
 	 */
-    public void movePdfs(File pdf, student student, String directory);
+    public void movePdfs(File pdf, Student student, String directory);
 }   

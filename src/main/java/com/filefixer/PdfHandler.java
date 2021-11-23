@@ -8,21 +8,20 @@ import java.util.List;
  */
 public class PdfHandler implements PdfHandlerInterface {
     /**
-     * See {@link pdfMover}.
+     * See {@link PdfMover}.
      */
-	private pdfMoverInterface PdfMover = new pdfMover();
+	private PdfMoverInterface PdfMover = new PdfMover();
 
     
     /** 
      * Parses a PDF file's name based on student information. 
      * If a student's information matches the PDF submission, the file is renamed and moved.
      * The status of the student in question is also changed.
-     * @param pdf The current PDF file.
-     * @param student_info The List containing student information.
+     * @param directory The folder-path of the directory files are to be moved.
      */
     @Override
-    public void manipulatePdf(File pdf, List<student> student_info, String directory) {
-        for (student o: student_info){
+    public void manipulatePdf(File pdf, List<Student> student_info, String directory) {
+        for (Student o: student_info){
             if(pdf.getName().contains(o.getStudentID())){
                 o.changeStatus(); 
                 PdfMover.movePdfs(pdf, o, directory); 

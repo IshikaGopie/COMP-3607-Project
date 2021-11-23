@@ -11,7 +11,7 @@ public class CsvHandler implements CsvHandlerInterface{
     /**
      * A List of all students present in the CSV file as well as each of their student information.
      */
-    private List<student> student_info = new ArrayList<student>();
+    private List<Student> student_info = new ArrayList<Student>();
 
     /**
      * Loads a student's participant ID, name and student ID from a CSV file into a List.
@@ -25,7 +25,7 @@ public class CsvHandler implements CsvHandlerInterface{
             while (data.hasNext()){
                 all_info = data.nextLine();
                 String[] studentData = all_info.split("\\,");
-                student_info.add(new student(studentData[0], studentData[1], studentData[2]));
+                student_info.add(new Student(studentData[0], studentData[1], studentData[2]));
             }
 
             data.close();
@@ -36,9 +36,9 @@ public class CsvHandler implements CsvHandlerInterface{
 
 
     /**
-     * @return {@link List}<{@link student}>: The List of students.
+     * @return {@link List}<{@link Student}>: The List of students.
      */
-    public List<student> getStudentInfo(){
+    public List<Student> getStudentInfo(){
         return student_info;
     }
 }

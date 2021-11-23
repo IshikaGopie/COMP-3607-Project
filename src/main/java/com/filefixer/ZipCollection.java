@@ -9,8 +9,7 @@ import org.apache.commons.io.FileUtils;
  */
 public class ZipCollection implements FileCollectionInterface{
     /** 
-     * Returns all ZIP folders present within a directory.
-     * @param path The folder-path of the directory.
+     * @param path The folder-path where the ZIP files are located.
      * @return {@link Collection}<{@link File}>: A collection of all ZIP files.
      */
     @Override

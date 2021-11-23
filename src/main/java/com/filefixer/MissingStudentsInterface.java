@@ -2,17 +2,17 @@ package com.filefixer;
 
 import java.util.List;
 /**
- * Interface for the {@link missingStudents} class.
+ * Interface for the {@link MissingStudents} class.
  */
 public interface MissingStudentsInterface {
     /**
-     * See {@link missingStudents#storeMissingStudents()}.
+     * See {@link MissingStudents#storeMissingStudents()}.
 	 */
     public void storeMissingStudents();
     /**
-     * See {@link missingStudents#addMissingStudents(List)}.
+     * See {@link MissingStudents#addMissingStudents(List)}.
      * @param student_info List containing student information.
      */
-    public void addMissingStudents(List<student> student_info);
+    public void addMissingStudents(List<Student> student_info);
     
 }

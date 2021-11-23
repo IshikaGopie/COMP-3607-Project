@@ -15,11 +15,8 @@ public class Student implements StudentInterface{
     /**
      * Initializes this student's participant ID, name and student ID.
      * Also initializes this student's {@link #studentMissing} variable to {@code true} or 'missing'.
-     * @param participantID
-     * @param name 
-     * @param studentID 
      */
-    public student(String participantID, String name, String studentID){
+    public Student(String participantID, String name, String studentID){
         this.participantID = participantID;
         this.name = name;
         this.studentID = studentID;
@@ -63,8 +60,8 @@ public class Student implements StudentInterface{
     
     @Override
     public boolean equals(Object O){
-        if(O instanceof student){
-            if(participantID.equals(((student)O).getParticipantID()) && name.equals(((student)O).getName()) && studentID.equals(((student)O).getStudentID()))
+        if(O instanceof Student){
+            if(participantID.equals(((Student)O).getParticipantID()) && name.equals(((Student)O).getName()) && studentID.equals(((Student)O).getStudentID()))
                 return true;
         }
         return false;

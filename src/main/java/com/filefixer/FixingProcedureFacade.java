@@ -12,16 +12,16 @@ import java.util.List;
  */
 public class FixingProcedureFacade implements FixingProcedureFacadeInterface{
 
-    private directoryHandlerInterface directoryHandler;
-    private zipCollectionHandlerInterface zipCollectionHandler;
-    private csvCollectionHandlerInterface csvCollectionHandler;
-    private csvHandlerInterface csvHandler;
-    private pdfHandlerInterface pdfHandler;
+    private DirectoryHandlerInterface directoryHandler;
+    private ZipCollectionHandlerInterface zipCollectionHandler;
+    private CsvCollectionHandlerInterface csvCollectionHandler;
+    private CsvHandlerInterface csvHandler;
+    private PdfHandlerInterface pdfHandler;
     /**
      * The List containing student information.
      */
-    private List<student> student_info;
-    private missingStudentsInterface missingStudents;
+    private List<Student> student_info;
+    private MissingStudentsInterface missingStudents;
     /**
      * The folder-path where renamed files should be placed.
      */
@@ -31,13 +31,13 @@ public class FixingProcedureFacade implements FixingProcedureFacadeInterface{
      * Initializes all class instances needed for the renaming of PDF files as well as the creation of a missing students text file.
      * @param directory See {@link #directory}.
      */
-    fixingProcedureFacade(String directory){
-        directoryHandler = new directoryHandler();
-        zipCollectionHandler = new zipCollectionHandler();
-        csvCollectionHandler = new csvCollectionHandler();
-        csvHandler = new csvHandler();
-        pdfHandler = new pdfHandler();
-        missingStudents = new missingStudents();
+    FixingProcedureFacade(String directory){
+        directoryHandler = new DirectoryHandler();
+        zipCollectionHandler = new ZipCollectionHandler();
+        csvCollectionHandler = new CsvCollectionHandler();
+        csvHandler = new CsvHandler();
+        pdfHandler = new PdfHandler();
+        missingStudents = new MissingStudents();
         
         this.directory = directory;
     }
@@ -55,14 +55,14 @@ public class FixingProcedureFacade implements FixingProcedureFacadeInterface{
 
     
     /** 
-     * Extracts files from ZIP folder. The collection parameter should only contain 1 ZIP folder. See {@link zipCollectionHandler}.
+     * Extracts files from ZIP folder. The collection parameter should only contain 1 ZIP folder. See {@link ZipCollectionHandler}.
      * @param zipFiles A collection of ZIP folders. 
      */
     public void extractFiles(Collection<File> zipFiles){
         String zipPath = zipCollectionHandler.zipCheck(zipFiles);
         if(zipPath != null){
-            File zipFile=new File(zipPath);
-            zipFolderInterface zipFolder=new zipFolder();
+            File zipFile = new File(zipPath);
+            ZipFolderInterface zipFolder = new ZipFolder();
             zipFolder.extractZip(zipFile);
         }
     }
@@ -70,7 +70,7 @@ public class FixingProcedureFacade implements FixingProcedureFacadeInterface{
     
     /**
      * @param pdfFiles A collection of all PDF files to be renamed.
-     * @param csvFiles A collection of CSV files to be parsed. See {@link csvCollectionHandler#getLastModified(Collection<File> files)}.
+     * @param csvFiles A collection of CSV files to be parsed. See {@link CsvCollectionHandler#getLastModified(Collection<File> files)}.
      */
     public void renameAndMovePdfs(Collection<File> pdfFiles, Collection<File> csvFiles){
         directoryHandler.newDirectory(directory);
