@@ -3,8 +3,14 @@ package com.filefixer;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
+/**
+ * This class handles the creation of one or more directories.
+ */
 public class directoryHandler implements directoryHandlerInterface{
-
+    /**
+     * Creates one or multiple directories based on folder-path given.
+     * @param path A folder-path.
+     */
     public void newDirectory(String path){
         try{
             Files.createDirectories(Paths.get(path));
@@ -12,14 +18,4 @@ public class directoryHandler implements directoryHandlerInterface{
             System.out.println("ERROR: " + e.getMessage());
         }
     }
-    
-    /*public void copyDirectory(String sourceDirectory, String destinationDirectory){
-        File sourceFile = new File(sourceDirectory); 
-        File destFile = new File(destinationDirectory);
-        try {
-            FileUtils.copyDirectory(sourceFile, destFile);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }*/
 }

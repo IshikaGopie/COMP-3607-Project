@@ -1,41 +1,64 @@
 package com.filefixer;
 
 public class student implements studentInterface{
-    private String participant_ID;
-    private String name;
-    private String student_ID;
-    private boolean student_missing;
+	
+    private String participantID;
     
-    public student(String participant_ID, String name, String student_ID){
-        this.participant_ID = participant_ID;
+    private String name;
+    
+    private String studentID;
+    /**
+     * This student's submission status.
+     */
+    private boolean studentMissing;
+    
+    /**
+     * Initializes this student's participant ID, name and student ID.
+     * Also initializes this student's {@link #studentMissing} variable to {@code true} or 'missing'.
+     * @param participantID
+     * @param name 
+     * @param studentID 
+     */
+    public student(String participantID, String name, String studentID){
+        this.participantID = participantID;
         this.name = name;
-        this.student_ID = student_ID;
-        student_missing = true;
+        this.studentID = studentID;
+        studentMissing = true;
     }
 
+    /**
+     * Changes this student's submission status from true to false (or 'missing' to 'present').
+     */
     @Override
     public void changeStatus(){
-        student_missing = false;
+        studentMissing = false;
     }
 
+    
     @Override
-    public String getparticipant_ID() {
-        return participant_ID;
+    public String getParticipantID() {
+        return participantID;
     }
 
+    
     @Override
     public String getName() {
         return name;
     }
 
     @Override
-    public String getstudent_ID() {
-        return student_ID;
+    public String getStudentID() {
+        return studentID;
     }
 
+    
+    /** 
+     * Returns {@link #studentMissing}.
+     * @return boolean: See {@link #studentMissing}.
+     */
     @Override
     public boolean getStatus(){
-        return student_missing;
+        return studentMissing;
     }
 
 

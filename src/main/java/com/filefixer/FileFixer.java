@@ -2,11 +2,20 @@ package com.filefixer;
 
 import java.io.File;
 import java.util.Collection;
-
+/**
+ * 
+ * @author G12
+ */
 public class FileFixer {
+
+    /**
+     * Renames and moves PDF files to a specified directory as well as creates a text file 
+     * detailing students whose submissions were not present.
+     * @param args The command line arguments.
+     */
     public static void main(String[] args) {
-        
-        fixingProcedureFacadeInterface fixingProcedure = new fixingProcedureFacade();
+
+        fixingProcedureFacadeInterface fixingProcedure = new fixingProcedureFacade("filesToRename/renamedFiles");
 
         Collection<File> zipFiles;
         fileGetterInterface fileGetter = new fileGetter(new zipCollection());
@@ -22,39 +31,8 @@ public class FileFixer {
         Collection<File> csvFiles;
         fileGetter.changeFileCollectionStrategy(new csvCollection());
         csvFiles = fileGetter.getFiles("filesToRename");
-        
+
         fixingProcedure.renameAndMovePdfs(pdfFiles, csvFiles);
         fixingProcedure.storeMissingStudents();
-
-        /*
-        fileCollectionHandlerInterface fileCollectionHandler = new fileCollectionHandler();
-        String zipPath = fileCollectionHandler.disallowCollection(zipFiles);
-        if(zipPath != null){
-            File zipFile = new File(zipPath);
-            ZipFolder zipFolder = new ZipFolder();
-            zipFolder.extractZip(zipFile);
-        }
-
-        String csvPath = fileCollectionHandler.getLastModified(csvFiles);
-        
-        csvHandlerInterface csvHandler = new csvHandler();
-        List<student> student_info = new ArrayList<student>();
-
-        directoryHandler.newDirectory("filesToRename/renamedFiles");
-
-        csvHandler.loadStudentInfo(csvPath);
-
-        student_info = csvHandler.getStudentInfo();
-
-        missingStudentsInterface missingStudents = new missingStudents();
-
-        pdfHandlerInterface pdfHandler = new pdfHandler();
-        for(File pdf: pdfFiles){
-            pdfHandler.manipulatePdf(pdf, student_info);
-        }
-
-        missingStudents.addMissingStudents(student_info);
-        missingStudents.store();
-        */
     }
 }
