@@ -5,7 +5,7 @@ import java.util.Collection;
 /**
  * Interface for the {@link csvCollectionHandler}.
  */
-public interface csvCollectionHandlerInterface {
+public interface CsvCollectionHandlerInterface {
     /**
      * See {@link csvCollectionHandler#getLastModified(Collection)}.
      * @param files The collection of CSV files to be parsed.
