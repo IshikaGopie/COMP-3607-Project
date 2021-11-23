@@ -5,7 +5,7 @@ import java.util.Collection;
 /**
  * Interface for the {@link fixingProcedureFacade}.
  */
-public interface fixingProcedureFacadeInterface {
+public interface FixingProcedureFacadeInterface {
     /**
      * See {@link fixingProcedureFacade#extractFiles(Collection)}.
 	 * @param zipFiles A collection of ZIP folders. 
