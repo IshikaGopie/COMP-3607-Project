@@ -4,7 +4,7 @@ import java.util.zip.ZipEntry;
 /**
  * This class handles the destination file-path of files being extracted.
  */
-public class zipPathHandler implements zipPathHandlerInterface{
+public class ZipPathHandler implements ZipPathHandlerInterface{
     /** 
      * Modifies the destination file-path of the current zipEntry.
      * @param zipEntry The current ZIP file being extracted.
