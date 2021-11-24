@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import java.util.ArrayList;
 import java.util.List;
 
-public class csvHandlerTest {
+public class CsvHandlerTest {
     String testFile = "testFiles/test.csv";
     private List<Student> student_info = new ArrayList<Student>();
 

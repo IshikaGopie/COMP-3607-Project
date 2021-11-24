@@ -23,10 +23,6 @@ public class CsvCollectionHandler implements CsvCollectionHandlerInterface {
                     chosenFile = file;
                 }
             }
-        }else if(files.size() < 1){
-            System.out.println("There is no CSV file present within the 'filesToRename' folder.");
-            System.out.println("Please input a CSV file to be parsed then restart the program.");
-            System.exit(0);
         }
         return chosenFile.getPath();
 	}

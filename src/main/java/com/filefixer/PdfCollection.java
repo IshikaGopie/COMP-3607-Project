@@ -18,6 +18,11 @@ public class PdfCollection implements FileCollectionInterface{
         File dir = new File(path);
 		String[] extension = new String[] { "pdf" };
 	    Collection<File> pdfFiles = FileUtils.listFiles(dir, extension, false);
+	    if(pdfFiles.size() < 1) {
+	    	System.out.println("There is no PDF file present within the folder specified.");
+            System.out.println("Please input the PDF files to be renamed then restart the program.");
+            System.exit(0);
+	    }
         return pdfFiles;
     }
 }

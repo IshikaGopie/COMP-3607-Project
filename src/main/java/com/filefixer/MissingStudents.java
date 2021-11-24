@@ -15,7 +15,10 @@ public class MissingStudents implements MissingStudentsInterface{
      * Stores all missing students to a text file if missing students exist in ArrayList.
      */
     public void storeMissingStudents() {
-        if(!(missingStudents.size() < 1)){
+        if(missingStudents.size() < 1){
+            System.out.println("No missing student submissions.");
+            return;
+        }else{
             try {
                 FileWriter fileWriter = new FileWriter("filesToRename/missingStudents.txt");  
                 for(String student: missingStudents){
