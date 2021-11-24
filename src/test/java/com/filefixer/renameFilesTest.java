@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.io.File;
 import java.util.Collection;
-public class renameFilesTest {
+public class RenameFilesTest {
     private String[] name1 = new String[3];
     private String[] name2 = new String[3];
     @Test
