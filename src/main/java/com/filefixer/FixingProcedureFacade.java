@@ -5,8 +5,8 @@ import java.util.Collection;
 import java.util.List;
 
 /**
- * This class handles all main steps in renaming PDF files. 
- * It also handles the creation of a text file detailing students whose submissions were not present.
+ * This class encapsulates all the main steps in renaming and relocating PDF files. 
+ * It also encapsulates to produce a text file detailing students whose submissions were not present.
  * This class utilizes the Facade Design Pattern which hides the complexity of other classes into three
  * methods that can be used by the client. 
  */
