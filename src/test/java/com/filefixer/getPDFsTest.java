@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Collection;
-public class getPDFsTest{
+public class GetPdfsTest{
     @Test
     void getPDFs(){
         FileGetterInterface fileGetter = new FileGetter(new PdfCollection());
